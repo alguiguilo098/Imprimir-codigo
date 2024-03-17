@@ -1,9 +1,17 @@
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
-        Teste<Integer> teste=new Teste<>();
-        StackTraceElement[] stack=teste.testeprint();
-        for (int i = 0; i < stack.length; i++) {
-            System.out.println(stack[i].getMethodName());
-        }        
+        Scanner intput=new Scanner(System.in);
+        try {
+            System.out.println("digite um int");
+            int num=intput.nextInt();
+            Teste<Integer> teste=new Teste<>(6);
+            StackTraceElement[] stack=teste.testeprint(1);
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }finally{
+            intput.close();
+        }
     }
 }
