@@ -1,5 +1,3 @@
-import java.util.Stack;
-
 public class Teste<T> {
     private int count;
     public int get_count(){
@@ -10,6 +8,9 @@ public class Teste<T> {
     }
     public StackTraceElement[] testeprint(int num){
         if (num<count) {
+            if (num==0) {
+                System.out.println("============SAIDA============");
+            }
             System.out.println("chamada "+num);
             num++;
             StackTraceElement[]stacktracelement=testeprint(num);
